@@ -72,7 +72,7 @@ public class Fragment {
     }
 
     public void oposite() {
-
+        this.numerator = this.numerator + (-1);
     }
 
     public void Fragmantcopy() {
@@ -99,4 +99,10 @@ public class Fragment {
         return this.numerator + "/" + this.denominator;
 
     }
+// triedu , konstruktor , ,get eri setery ,,
+    // cislo a zlomok
+    // prima cisla
+
+
+
 }

@@ -6,6 +6,7 @@ public class Main {
 
         Fragment fragment = new Fragment(32,48);
 
+        Fragment fragment1 = new Fragment(7, 28);
         System.out.println(fragment.getRealValue());
 
 
@@ -14,11 +15,13 @@ public class Main {
         fragment.changeToBasicShape();
         System.out.println(fragment.toString());
 
-        Fragment fragment1 = new Fragment(7, 28);
 
         System.out.println(fragment1.toString());
 
 
+        MyMath myMath = new MyMath();
+        System.out.println("==================================");
+        System.out.println(myMath.add(fragment,fragment1));
 
 
     }
