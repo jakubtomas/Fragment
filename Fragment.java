@@ -103,6 +103,11 @@ public class Fragment {
     // cislo a zlomok
     // prima cisla
 
+    public MixedNumber getMixedNumber() {  //
+        int value  = numerator / denominator;
+        Fragment f = new Fragment(numerator%denominator, denominator);
 
+        return  new MixedNumber(value,f);
+    }
 
 }
