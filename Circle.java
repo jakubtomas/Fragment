@@ -17,7 +17,7 @@ public class Circle {
     }
 
     public  double area() {
-        // obsah
+        // obsah.
 
         return Math.PI * (radius * radius);
     }
