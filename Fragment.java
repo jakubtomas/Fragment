@@ -33,32 +33,23 @@ public class Fragment {
     }
 
     // private znamena
-    private int getTheLargestCommonDivisor() {
 
-        // absolutne hodnoty
-
-        int absNumerator = Math.abs(numerator);
-        int absDenominator = Math.abs(denominator);
-
-        int  commonDivisor =  absNumerator < absDenominator  ? absNumerator : absDenominator;  // ternarny operator
-        while(absNumerator % commonDivisor != 0  || absDenominator % commonDivisor != 0){
-            commonDivisor --;
-
-        }
-
-        return commonDivisor;
-    }
 
 
     public void changeToBasicShape() {
             // jedna metoda roby iba jednu vec
 
-
+        int commonDividisor=getTheLargestCommonDivisor();
+        numerator=numerator/commonDividisor;
+        denominator=denominator/commonDividisor;
     }
 
     public void extendFragment(int value) {
             /// vynasoby citatela aj menovatel value
-
+        if(value!=0){
+            numerator*=value;
+            denominator*=value;
+        }
     }
 
     public double getRealValue() {
@@ -72,13 +63,34 @@ public class Fragment {
     }
 
     public void oposite() {
-        this.numerator = this.numerator + (-1);
+        //this.numerator = this.numerator + (-1);
+        numerator*=-1;
     }
 
-    public void Fragmantcopy() {
-      // Fragment  newFragment = new Fragment( numerator, denominator);
-      // return   newFragment;
+    public Fragment copy() {
+
+        Fragment newFragment=new Fragment(numerator, denominator);
+        return newFragment;
     }
+
+
+    private int getTheLargestCommonDivisor(){
+        /* if(numerator<denominator)
+              commonDivisor=numerator;
+           else
+              commonDivisor=denominator;  */
+
+        // namiesto if pouzijem ternarny operator
+        int absNumerator=Math.abs(numerator);
+        int absDenominator=Math.abs(denominator);
+
+        int commonDivisor=absNumerator<absDenominator?absNumerator:absDenominator;
+        while (absNumerator % commonDivisor != 0 || absDenominator%commonDivisor != 0) {
+            commonDivisor--;
+        }
+        return commonDivisor;
+    }
+
 
 
     // metoda ktora zisti či je zlomok v zakladnom tavare

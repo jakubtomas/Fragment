@@ -20,8 +20,14 @@ public class Main {
 
 
         MyMath myMath = new MyMath();
-        System.out.println("==================================");
         System.out.println(myMath.add(fragment,fragment1));
+
+        System.out.println("==================================");
+        Rectangle myrectangle = new Rectangle(10, 4);
+        System.out.println(myrectangle.calcDiagonale());
+        System.out.println(myrectangle.calcPerimeter());
+        System.out.println(myrectangle.calcArea());
+        myrectangle.showRectangle();
 
 
     }
