@@ -67,6 +67,7 @@ public class MyMath {
 
     }
     // pomyloformyzmus  1 metoda ma viac tvarov
+    // metoda ktora ma rovnaky názov ale viac tvarov , vyhoda je že nemusim vytvarat viac zbytočných metod
     public Fragment mull(int number, Fragment a , Fragment b) {
         Fragment result = null;
 

@@ -5,7 +5,7 @@ public class Fragment {
     private int denominator;
 
 
-    public Fragment(int numerator, int denominator) {
+    public Fragment(int numerator, int denominator) { // constructor
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -84,7 +84,7 @@ public class Fragment {
         int absNumerator=Math.abs(numerator);
         int absDenominator=Math.abs(denominator);
 
-        int commonDivisor=absNumerator<absDenominator?absNumerator:absDenominator;
+        int commonDivisor=absNumerator<absDenominator ? absNumerator : absDenominator;
         while (absNumerator % commonDivisor != 0 || absDenominator%commonDivisor != 0) {
             commonDivisor--;
         }

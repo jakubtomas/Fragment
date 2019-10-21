@@ -22,13 +22,18 @@ public class Main {
         MyMath myMath = new MyMath();
         System.out.println(myMath.add(fragment,fragment1));
 
-        System.out.println("==================================");
         Rectangle myrectangle = new Rectangle(10, 4);
         System.out.println(myrectangle.calcDiagonale());
         System.out.println(myrectangle.calcPerimeter());
         System.out.println(myrectangle.calcArea());
         myrectangle.showRectangle();
 
+        System.out.println("==================================");
+        Bank bank1 = new Bank("Change money ");
+        System.out.println(bank1.convert(520, "TRY"));
+        System.out.println("==================================");
+        System.out.println("Month payment ");
+        System.out.println(bank1.loan(1000,4.5 , 20));
 
     }
 }

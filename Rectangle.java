@@ -33,8 +33,6 @@ public class Rectangle {
 
 
     public double calcDiagonale() { // uhlopriecka pytagorova veta
-
-
         return Math.sqrt(a*a+b*b);
     }
 
